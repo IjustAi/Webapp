@@ -5,7 +5,7 @@ const { resolve } = require('path')
 registerRouter = () => {
     let routers = [];
     glob.sync(resolve(__dirname, './', '**/*.js'))//at the same time
-        .filter(value => (value.indexOf('index.js') === -1)) //The indexOf() method returns -1 if the value is not found.
+        .filter(value => (value.indexOf('index.js') === -1)) 
         .map(router => {//router middleware
             routers.push(require(router).routes())
             routers.push(require(router).allowedMethods())
