@@ -1,5 +1,5 @@
 const compose = require('koa-compose') //compose the gievn middlesware and return middlware
-const glob = require('glob') //whole dir find the file 
+const glob = require('glob') 
 const { resolve } = require('path')
 
 registerRouter = () => {
