@@ -11,7 +11,7 @@ app.use(koaBody());
 app.use(registerRouter());
 app.use(DigestAuth('Simple Application'));
 app.use(function * (next) {
-  if (this.url === '/secret' && this.request.auth == null) { // No authorization provided
+  if (this.url === '/secret' && this.request.auth == null) { 
     this.body = 'Please log in.'
     return // Middleware will auto give 401 response
   }
